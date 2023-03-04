@@ -1,6 +1,6 @@
 import { Employee } from "@/lib/person/Employee"
-import { Relative } from "@/lib/person/Relatives"
-import { Spouse } from "@/lib/person/Spouse"
+import { Relative } from "@/lib/family/Relatives"
+import { Spouse } from "@/lib/family/Spouse"
 
 const disabledPersonTypes = ['一般の障害者', '特別障害者', '同居特別障害者'] as const;
 export type DisabledPersonType = typeof disabledPersonTypes[number];

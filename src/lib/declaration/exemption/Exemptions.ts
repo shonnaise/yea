@@ -1,4 +1,3 @@
-import { EmployeeId } from "@/lib/person/Employee";
 import { BasicExemption } from "./BasicExemption";
 import { DependentsExemption as DependentExemption } from "./DependentsExemption";
 import { DisabledPersonExemption } from "./DisabledPersonExemption";
@@ -7,7 +6,7 @@ import { HouseLoanExemption } from "./HouseLoanExemption";
 import { IncomeAdjustmentExemption } from "./InccomeAdjustmentExemption";
 import { LifeInsuranceExemption } from "./LifeInsuranceExemption";
 import { SingleParentExemption } from "./SingleParentExemption";
-import { SmallBusinessExemption } from "./SmallBuisinessInsuranceExemption";
+import { SmallBuisinessInsuranceExemption } from "./SmallBuisinessInsuranceExemption";
 import { SocialInsuranceExemption } from "./SocialInsuranceExemption";
 import { SpouseExemption, SpouseSpecialExemption } from "./SpouseExemption";
 import { WidowExemption } from "./WidowExemption";
@@ -17,7 +16,6 @@ const deductionTypes = ['基礎控除', '扶養控除', '配偶者控除', '配�
 export type DeductionType = typeof deductionTypes[number];
 
 export type Exemptions = {
-    employeeId: EmployeeId,
     basic: BasicExemption,
     dependent: DependentExemption,
     spouse: SpouseExemption,
@@ -30,6 +28,6 @@ export type Exemptions = {
     lifeInsurance: LifeInsuranceExemption,
     earthquakeInsurance: EarthquakeInsuranceExemption,
     socialInsurance: SocialInsuranceExemption,
-    smallBusiness: SmallBusinessExemption,
+    smallBusiness: SmallBuisinessInsuranceExemption,
     houseLoan: HouseLoanExemption,
 } 

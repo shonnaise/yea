@@ -1,7 +1,7 @@
-import { Spouse } from "@/lib/person/Spouse";
-import { DependentRelative, Relative } from "@/lib/person/Relatives";
+import { Spouse } from "@/lib/family/Spouse";
+import { DependentRelative, Relative } from "@/lib/family/Relatives";
 import { calculateAgeOfYearEnd } from "@/lib/util/BirthDate";
-import { isChild } from "@/lib/person/Relationship";
+import { isChild } from "@/lib/family/Relationship";
 import { Employee } from "@/lib/person/Employee";
 
 const dependentRelativeType = ['年少扶養親族', '一般の控除対象扶養親族', '特定扶養親族', '同居老親等', 'その他の老人扶養親族'] as const;

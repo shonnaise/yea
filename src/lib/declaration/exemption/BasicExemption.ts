@@ -1,6 +1,7 @@
 /**
  * 基礎控除
  */
+import { IncomeAmount } from "@/lib/income/IncomeAmount";
 import { EmployeeId } from "@/lib/person/Employee";
 import { TotalIncomeAmount } from "../../income/TotalIncome";
 
@@ -23,5 +24,12 @@ export const getAmountOfExemption = (totalIncomeAmount: TotalIncomeAmount): numb
 
 export type BasicExemption = {
     employeeId: EmployeeId,
+    salaryIncomeAmount: IncomeAmount,
+    otherIncomeAmount: TotalIncomeAmount,
+    totalIncomeAmount: TotalIncomeAmount,
+    category: BasicExemptionCategory,
     exemptionAmount: number,
 };
+
+const basicExemptionCategories = ['A', 'B', 'C'];
+export type BasicExemptionCategory = typeof basicExemptionCategories[number];
